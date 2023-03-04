@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dly-algs"
+description = "A collection of python algorithms to complete trivial tasks."
+version = "0.1.0"
+license = { text = "MIT" }
+authors = [
+    { name = "Robin Roth" },
+    { name = "Robin Roth", email = "r.roth@mail.de" }
+]
+[tool.setuptools.packages.find]
+include = ["dly_algs*"]
+exclude = ["tests*"]
+
+[project.optional-dependencies]
+dev = ["tox"]

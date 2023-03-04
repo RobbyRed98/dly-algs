@@ -1,0 +1,399 @@
+[
+  {
+    "description": "Checks compares for non-nested equal dicts.",
+    "x_dict": {
+      "a": 1,
+      "b": "test",
+      "c": 1.5,
+      "d": true,
+      "e": false
+    },
+    "y_dict": {
+      "a": 1,
+      "b": "test",
+      "c": 1.5,
+      "d": true,
+      "e": false
+    },
+    "expected": true
+  },
+  {
+    "description": "Checks compares for non-nested non-equal dicts (bool attribute difference).",
+    "x_dict": {
+      "a": 1,
+      "b": "test",
+      "c": 1.5,
+      "d": true,
+      "e": false
+    },
+    "y_dict": {
+      "a": 1,
+      "b": "test",
+      "c": 1.5,
+      "d": false,
+      "e": false
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for non-nested non-equal dicts (float attribute difference).",
+    "x_dict": {
+      "a": 1,
+      "b": "test",
+      "c": 1.5,
+      "d": true,
+      "e": false
+    },
+    "y_dict": {
+      "a": 1,
+      "b": "test",
+      "c": 2.0,
+      "d": true,
+      "e": false
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for non-nested non-equal dicts (str attribute difference).",
+    "x_dict": {
+      "a": 1,
+      "b": "test",
+      "c": 1.5,
+      "d": true,
+      "e": false
+    },
+    "y_dict": {
+      "a": 1,
+      "b": "foo ",
+      "c": 1.5,
+      "d": true,
+      "e": false
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for non-nested non-equal dicts (int attribute difference).",
+    "x_dict": {
+      "a": 1,
+      "b": "test",
+      "c": 1.5,
+      "d": true,
+      "e": false
+    },
+    "y_dict": {
+      "a": 2,
+      "b": "test",
+      "c": 1.5,
+      "d": true,
+      "e": false
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for non-nested non-equal dicts.",
+    "x_dict": {
+      "a": 1,
+      "b": "test",
+      "c": 1.5,
+      "d": true,
+      "e": false
+    },
+    "y_dict": {
+      "a": 2,
+      "b": "foo ",
+      "c": 2.0,
+      "d": false,
+      "e": true
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for 1 level nested equal dicts.",
+    "x_dict": {
+      "nesting_1": {
+        "a": 1,
+        "b": "test",
+        "c": 1.5,
+        "d": true,
+        "e": false
+      }
+    },
+    "y_dict": {
+      "nesting_1": {
+        "a": 1,
+        "b": "test",
+        "c": 1.5,
+        "d": true,
+        "e": false
+      }
+    },
+    "expected": true
+  },
+  {
+    "description": "Checks compares for 1 level nested non-equal dicts (bool attribute difference).",
+    "x_dict": {
+      "nesting_1": {
+        "a": 1,
+        "b": "test",
+        "c": 1.5,
+        "d": true,
+        "e": false
+      }
+    },
+    "y_dict": {
+      "nesting_1": {
+        "a": 1,
+        "b": "test",
+        "c": 1.5,
+        "d": false,
+        "e": false
+      }
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for 1 level nested non-equal dicts (float attribute difference).",
+    "x_dict": {
+      "nesting_1": {
+        "a": 1,
+        "b": "test",
+        "c": 1.5,
+        "d": true,
+        "e": false
+      }
+    },
+    "y_dict": {
+      "nesting_1": {
+        "a": 1,
+        "b": "test",
+        "c": 2.0,
+        "d": true,
+        "e": false
+      }
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for 1 level nested non-equal dicts (str attribute difference).",
+    "x_dict": {
+      "nesting_1": {
+        "a": 1,
+        "b": "test",
+        "c": 1.5,
+        "d": true,
+        "e": false
+      }
+    },
+    "y_dict": {
+      "nesting_1": {
+        "a": 1,
+        "b": "foo ",
+        "c": 1.5,
+        "d": true,
+        "e": false
+      }
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for 1 level nested non-equal dicts (int attribute difference).",
+    "x_dict": {
+      "nesting_1": {
+        "a": 1,
+        "b": "test",
+        "c": 1.5,
+        "d": true,
+        "e": false
+      }
+    },
+    "y_dict": {
+      "nesting_1": {
+        "a": 2,
+        "b": "test",
+        "c": 1.5,
+        "d": true,
+        "e": false
+      }
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for 1 level nested non-equal dicts.",
+    "x_dict": {
+      "nesting_1": {
+        "a": 1,
+        "b": "test",
+        "c": 1.5,
+        "d": true,
+        "e": false
+      }
+    },
+    "y_dict": {
+      "nesting_1": {
+        "a": 2,
+        "b": "foo ",
+        "c": 2.0,
+        "d": false,
+        "e": true
+      }
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for 2 level nested equal dicts.",
+    "x_dict": {
+      "nesting_2": {
+        "nesting_1": {
+          "a": 1,
+          "b": "test",
+          "c": 1.5,
+          "d": true,
+          "e": false
+        }
+      }
+    },
+    "y_dict": {
+      "nesting_2": {
+        "nesting_1": {
+          "a": 1,
+          "b": "test",
+          "c": 1.5,
+          "d": true,
+          "e": false
+        }
+      }
+    },
+    "expected": true
+  },
+  {
+    "description": "Checks compares for 2 level nested non-equal dicts (bool attribute difference).",
+    "x_dict": {
+      "nesting_2": {
+        "nesting_1": {
+          "a": 1,
+          "b": "test",
+          "c": 1.5,
+          "d": true,
+          "e": false
+        }
+      }
+    },
+    "y_dict": {
+      "nesting_2": {
+        "nesting_1": {
+          "a": 1,
+          "b": "test",
+          "c": 1.5,
+          "d": false,
+          "e": false
+        }
+      }
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for 2 level nested non-equal dicts (float attribute difference).",
+    "x_dict": {
+      "nesting_2": {
+        "nesting_1": {
+          "a": 1,
+          "b": "test",
+          "c": 1.5,
+          "d": true,
+          "e": false
+        }
+      }
+    },
+    "y_dict": {
+      "nesting_2": {
+        "nesting_1": {
+          "a": 1,
+          "b": "test",
+          "c": 2.0,
+          "d": true,
+          "e": false
+        }
+      }
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for 2 level nested non-equal dicts (str attribute difference).",
+    "x_dict": {
+      "nesting_2": {
+        "nesting_1": {
+          "a": 1,
+          "b": "test",
+          "c": 1.5,
+          "d": true,
+          "e": false
+        }
+      }
+    },
+    "y_dict": {
+      "nesting_2": {
+        "nesting_1": {
+          "a": 1,
+          "b": "foo ",
+          "c": 1.5,
+          "d": true,
+          "e": false
+        }
+      }
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for 2 level nested non-equal dicts (int attribute difference).",
+    "x_dict": {
+      "nesting_2": {
+        "nesting_1": {
+          "a": 1,
+          "b": "test",
+          "c": 1.5,
+          "d": true,
+          "e": false
+        }
+      }
+    },
+    "y_dict": {
+      "nesting_2": {
+        "nesting_1": {
+          "a": 2,
+          "b": "test",
+          "c": 1.5,
+          "d": true,
+          "e": false
+        }
+      }
+    },
+    "expected": false
+  },
+  {
+    "description": "Checks compares for 2 level nested non-equal dicts.",
+    "x_dict": {
+      "nesting_2": {
+        "nesting_1": {
+          "a": 1,
+          "b": "test",
+          "c": 1.5,
+          "d": true,
+          "e": false
+        }
+      }
+    },
+    "y_dict": {
+      "nesting_2": {
+        "nesting_1": {
+          "a": 2,
+          "b": "foo ",
+          "c": 2.0,
+          "d": false,
+          "e": true
+        }
+      }
+    },
+    "expected": false
+  }
+]
+

@@ -1,0 +1,8 @@
+[
+  {
+    "description": "The default test from the docstrings. (TODO write more tests)",
+    "x_dict": {"a": 1, "b": {"c": 1, "d": 1}},
+    "y_dict": {"b": {"c": 2, "e": 2}},
+    "expected": {"a": 1, "b": {"c": 2, "d": 1, "e": 2}}
+  }
+]
