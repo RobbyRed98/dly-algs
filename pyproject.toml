@@ -4,16 +4,24 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dly-algs"
+dynamic = ["version", "readme"]
 description = "A collection of python algorithms to complete trivial tasks."
-version = "0.1.0"
 license = { text = "MIT" }
 authors = [
     { name = "Robin Roth" },
     { name = "Robin Roth", email = "r.roth@mail.de" }
 ]
+[tool.setuptools.dynamic]
+version = { attr = "dly_algs.__version__" }
+readme = { file = ["README.md"], content-type = "test/markdown" }
+
 [tool.setuptools.packages.find]
 include = ["dly_algs*"]
 exclude = ["tests*"]
 
 [project.optional-dependencies]
 dev = ["tox"]
+
+[project.urls]
+homepage = "https://github.com/RobbyRed98/dly-algs"
+repository = "https://github.com/RobbyRed98/dly-algs"
